@@ -1,1 +1,25 @@
 <!--Here you can view a squads details and it's members and add heroes to the squad-->
+<!--Get clicked squaa details and form and Fill in the page according to the squaas details.-->
+{{#partial "title"}}
+<!--{SquaName}-->
+{{/partial}}
+
+{{#partial "content"}}
+    <div class="card">
+        <h1 class="block">SquaaName</h1>
+        <hr>
+        <p>  Cause   |    SquaaSize   </p>
+    </div>
+    <div class="container">
+<!--     {#{ each hero}}-->
+            <div class="well">
+                Name: BigBigHero
+                Age:26
+                Special Power: Cutting onions without crying
+                <small>Weakness: Looking at the onions he's cutting</small>
+                <hr>
+            </div>
+<!--       { {/each}}-->
+    </div>
+{{/partial}}
+{{> layout.hbs }}
