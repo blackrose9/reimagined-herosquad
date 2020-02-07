@@ -1,3 +1,4 @@
+import definitions.Hero;
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 
@@ -20,9 +21,14 @@ public class App {
 
         post("/view_squad", (request, response) -> {
             String alias = request.queryParams("alias");
-            String age = request.queryParams("name");
-            String power = request.queryParams("name");
-            String kryptonite = request.queryParams("name");
+//            get string age and parse it
+            String strAge = request.queryParams("age");
+            Integer age = Integer.parseInt(strAge);
+
+            String power = request.queryParams("power");
+            String kryptonite = request.queryParams("kryptonite");
+            Hero newHero = new Hero(alias,age,power,kryptonite);
+
             return new ModelAndView(model, "squad_view.hbs");
         }, new HandlebarsTemplateEngine());
     }
