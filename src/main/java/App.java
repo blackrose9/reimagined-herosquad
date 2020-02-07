@@ -13,12 +13,17 @@ public class App {
             return new ModelAndView(model, "squads_gallore.hbs");
         }, new HandlebarsTemplateEngine());
 
-        get("/view_squad", (request, response) -> {
-            return new ModelAndView(model, "squad_view.hbs");
+        get("/create_hero", (request, response) -> {
+
+            return new ModelAndView(model, "create_hero.hbs");
         }, new HandlebarsTemplateEngine());
 
-        get("/create_hero", (request, response) -> {
-            return new ModelAndView(model, "create_hero.hbs");
+        post("/view_squad", (request, response) -> {
+            String alias = request.queryParams("alias");
+            String age = request.queryParams("name");
+            String power = request.queryParams("name");
+            String kryptonite = request.queryParams("name");
+            return new ModelAndView(model, "squad_view.hbs");
         }, new HandlebarsTemplateEngine());
     }
 }
