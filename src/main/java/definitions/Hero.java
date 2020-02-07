@@ -1,5 +1,7 @@
 package definitions;
 
+import java.util.ArrayList;
+
 public class Hero {
     private String mAlias;
     private int mAge;
@@ -11,6 +13,14 @@ public class Hero {
         this.mAge = age;
         this.mPower = power;
         this.mKryptonite = kryptonite;
+    }
+
+    public static ArrayList<Hero> getAll(){
+        return instances;
+    }
+
+    public static void retireAllHeroes(){
+        instances.clear();
     }
 
     public String getAlias() {
