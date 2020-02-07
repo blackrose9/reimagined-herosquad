@@ -2,6 +2,7 @@ import definitions.Hero;
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,7 +11,10 @@ import static spark.Spark.*;
 public class App {
     public static void main(String[] args) {
         Map<String, Object> model = new HashMap<String, Object>();
+        ArrayList<Hero> heroes = Hero.getAll();
+
         get("/", (request, response) -> {
+            model.put("heroes", heroes);
             return new ModelAndView(model, "squads_gallore.hbs");
         }, new HandlebarsTemplateEngine());
 

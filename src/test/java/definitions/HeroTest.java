@@ -6,12 +6,13 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class HeroTest {
-    Hero hero = new Hero("Captain Man", 30, "Indestructability", "He needs a sidekick");
-    Hero hero2 = new Hero("Cyborg", 20, "90% robot", "water I guess");
     @After
     public void tearDown() {
         Hero.retireAllHeroes();
     }
+
+    Hero hero = new Hero("Captain Man", 30, "Indestructability", "He needs a sidekick");
+    Hero hero2 = new Hero("Cyborg", 20, "90% robot", "water I guess");
 
     @Test
     public void getAllHeroesCorrectly_true() {

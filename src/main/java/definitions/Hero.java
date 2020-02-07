@@ -8,20 +8,24 @@ public class Hero {
     private String mPower;
     private String mKryptonite;
 
+    private static ArrayList<Hero> instances = new ArrayList<Hero>();
+
     public Hero(String alias, int age, String power, String kryptonite) {
         this.mAlias = alias;
         this.mAge = age;
         this.mPower = power;
         this.mKryptonite = kryptonite;
+
+        instances.add(this);
+//      instances.addAll(mAge, mAlias, mKryptonite, mPower);
     }
 
     public static ArrayList<Hero> getAll(){
-//        return instances;
-        return null;
+        return instances;
     }
 
     public static void retireAllHeroes(){
-//        instances.clear();
+        instances.clear();
     }
 
     public String getAlias() {
