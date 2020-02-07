@@ -16,11 +16,12 @@ public class Hero {
     }
 
     public static ArrayList<Hero> getAll(){
-        return instances;
+//        return instances;
+        return null;
     }
 
     public static void retireAllHeroes(){
-        instances.clear();
+//        instances.clear();
     }
 
     public String getAlias() {
