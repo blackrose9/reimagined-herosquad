@@ -6,20 +6,25 @@
 
 {{#partial "content"}}
     <div class="card">
-        <h1 class="block">SquaaName</h1>
+        <h1 class="block">MasterSquad</h1>
         <hr>
-        <p>  Cause   |    SquaaSize   </p>
+        <p>  Cause   |    max of 50 members   </p>
     </div>
     <div class="container">
-<!--     {#{ each hero}}-->
+        {{#if heroes}}
+            {{#each heroes}}
             <div class="well">
-                Name: BigBigHero
-                Age:26
-                Special Power: Cutting onions without crying
-                <small>Weakness: Looking at the onions he's cutting</small>
+                Name: {{alias}}
+                Age:{{age}}
+                Special Power: {{power}}
+                <small>Weakness: {{kryptonite}} </small>
                 <hr>
             </div>
-<!--       { {/each}}-->
+            {{/each}}
+        {{else}}
+            <h3>No heroes in this squad</h3>
+            <a href="/create_hero">Add some here</a>
+        {{/if}}
     </div>
 {{/partial}}
 {{> layout.hbs }}

@@ -14,16 +14,14 @@ public class App {
         ArrayList<Hero> heroes = Hero.getAll();
 
         get("/", (request, response) -> {
-            model.put("heroes", heroes);
             return new ModelAndView(model, "squads_gallore.hbs");
         }, new HandlebarsTemplateEngine());
 
         get("/create_hero", (request, response) -> {
-
             return new ModelAndView(model, "create_hero.hbs");
         }, new HandlebarsTemplateEngine());
 
-        post("/view_squad", (request, response) -> {
+        post("/view_squad/new", (request, response) -> {
             String alias = request.queryParams("alias");
 //            get string age and parse it
             String strAge = request.queryParams("age");
@@ -35,5 +33,11 @@ public class App {
 
             return new ModelAndView(model, "squad_view.hbs");
         }, new HandlebarsTemplateEngine());
+
+        get("/view_squad", (request, response) -> {
+            model.put("heroes", heroes);
+            return new ModelAndView(model, "squad_view.hbs");
+        }, new HandlebarsTemplateEngine());
+
     }
 }
