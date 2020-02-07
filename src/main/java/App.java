@@ -14,11 +14,15 @@ public class App {
         ArrayList<Hero> heroes = Hero.getAll();
 
         get("/", (request, response) -> {
+            request.session().attribute("username");
             return new ModelAndView(model, "squads_gallore.hbs");
         }, new HandlebarsTemplateEngine());
 
-        get("/create_hero", (request, response) -> {
-            return new ModelAndView(model, "create_hero.hbs");
+        post("/session", (request, response) -> {
+            String username = request.queryParams("username");
+            request.session().attribute("username", username);
+            model.put("username", username);
+            return  new ModelAndView(model, "squads_gallore.hbs");
         }, new HandlebarsTemplateEngine());
 
         post("/view_squad/new", (request, response) -> {
