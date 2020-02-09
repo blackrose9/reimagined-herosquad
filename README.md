@@ -7,7 +7,7 @@ Heroes, joining Squads, and using their powers to do good.
 
 ## Deployment
 ### Online
-Run this link in your browser: 
+Run this link in your browser: -Coming Soon-
 ### Development server
 1) Fork this Repository
 2) gradle build the project
@@ -15,7 +15,7 @@ Run this link in your browser:
 4) In your browser > http://localhost:4567
 
 ### CodeBeat Grade
-######-Coming Soon-
+#####-Coming Soon-
 
 ### Known Bugs
 * viewing the details of a squad will be fixed in a future update
