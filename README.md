@@ -18,5 +18,4 @@ Run this link in your browser: -Coming Soon-
 #####-Coming Soon-
 
 ### Known Bugs
-* viewing the details of a squad will be fixed in a future update
 * deleting squads or heroes will be implemented in the future
