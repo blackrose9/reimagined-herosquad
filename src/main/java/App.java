@@ -33,7 +33,7 @@ public class App {
 
             Hero newHero = new Hero(alias,age,power,kryptonite);
             model.put("newHero",newHero);
-            return new ModelAndView(model, "success.hbs");
+            return new ModelAndView(model, "heroes_gallore.hbs");
         }, new HandlebarsTemplateEngine());
 
         get("/", (request, response) -> {
