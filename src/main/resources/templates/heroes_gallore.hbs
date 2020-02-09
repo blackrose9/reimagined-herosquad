@@ -6,18 +6,21 @@
         <li role="presentation"><a href="/view_squa">View Squads</a></li>
     </ul>
 {{/partial}}
+{{#partial "content"}}
+    {{#if heroes}}
+        {{#each heroes}}
+            <div class="well">
+                Name: {{alias}}
+                Age:{{age}}
+                Special Power: {{power}}
+                <small>Weakness: {{kryptonite}} </small>
+                <hr>
+            </div>
+        {{/each}}
+    {{else}}
+        No heroes in this squad yet... add some to help you achieve your cause.
+        <a href="/create_hero" class="btn">Shop for Hero</a>
+    {{/if}}
+{{/partial}}
 
-{{#if heroes}}
-    {{#each heroes}}
-        <div class="well">
-            Name: {{alias}}
-            Age:{{age}}
-            Special Power: {{power}}
-            <small>Weakness: {{kryptonite}} </small>
-            <hr>
-        </div>
-    {{/each}}
-{{else}}
-    No heroes in this squad yet... add some to help you achieve your cause.
-    <a href="/create_hero" class="btn">Shop for Hero</a>
-{{/if}}
+{{>layout.hbs}}
