@@ -9,7 +9,6 @@ import static spark.Spark.*;
 
 public class App {
     public static void main(String[] args) {
-
         Squad squad = new Squad("Kitchen Masters", "Good Cooking", 10, "info");
         Squad squad2 = new Squad("Spice Masters", "Good Cooking", 10, "warning");
         Squad squad3 = new Squad("Sous Masters", "Good Cooking", 10, "success");
