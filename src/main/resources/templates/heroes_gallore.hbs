@@ -9,10 +9,13 @@
 {{#partial "content"}}
     {{#if heroes}}
         {{#each heroes}}
-            <div class="well">
+            <div class="card">
                 Name: {{alias}}
-                Age:{{age}}
+                <br>
+                Age: {{age}}
+                <br>
                 Special Power: {{power}}
+                <br>
                 <small>Weakness: {{kryptonite}} </small>
                 <hr>
             </div>

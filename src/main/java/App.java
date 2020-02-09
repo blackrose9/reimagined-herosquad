@@ -9,14 +9,16 @@ import static spark.Spark.*;
 
 public class App {
     public static void main(String[] args) {
-        Squad squad = new Squad("Kitchen Masters", "Good Cooking", 10, "info");
-        Squad squad2 = new Squad("Spice Masters", "Good Cooking", 10, "warning");
-        Squad squad3 = new Squad("Sous Masters", "Good Cooking", 10, "success");
-        Squad squad4 = new Squad("Meat Masters", "Good Cooking", 10, "danger");
+        Squad squad = new Squad("Kitchen Masters", "Fantastic Cooking", 10, "info");
+        Squad squad2 = new Squad("Spice Masters", "Flavourful Cooking", 10, "warning");
+        Squad squad3 = new Squad("Sous Masters", "Speeedy Cooking", 10, "success");
+        Squad squad4 = new Squad("Meat Masters", "Nyams is life", 10, "danger");
 
         Hero hero = new Hero("Kitchen Warrior", 23, "Master knife handler", "tends to cut himself very often");
         Hero hero2 = new Hero("Spice Master", 19, "can perfectly blend any spice", "all that aroma makes him sneeze, way too often");
+
         Map<String, Object> model = new HashMap<String, Object>();
+        staticFileLocation("/public");
 
         post("/session", (request, response) -> {
             String username = request.queryParams("username");
