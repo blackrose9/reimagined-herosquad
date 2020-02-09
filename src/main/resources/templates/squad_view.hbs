@@ -4,25 +4,24 @@
 <!--{SquaName}-->
 {{/partial}}
 
+{{#partial "active"}}
+    <ul class="nav nav-tabs">
+        <li role="presentation"><a href="/">Home</a></li>
+        <li role="presentation"><a href="/view_hero">View Heroes</a></li>
+        <li role="presentation"><a href="/create_hero">Create New Hero</a></li>
+        <li role="presentation" class="active"><a href="/view_squa">View Squads</a></li>
+    </ul>
+{{/partial}}
+
 {{#partial "content"}}
     <div class="card">
         <h1 class="block">MasterSquad</h1>
         <hr>
-        <p>  Cause   |    max of 50 members   </p>
+        <h2> {{ cause }}  </h2>
+        <h3>  {{members}} members   </h3>
     </div>
     <div class="container">
-        {{#if heroes}}
-            {{#each heroes}}
-            <div class="well">
-                Name: {{alias}}
-                Age:{{age}}
-                Special Power: {{power}}
-                <small>Weakness: {{kryptonite}} </small>
-                <hr>
-            </div>
-            {{/each}}
 
-        {{/if}}
     </div>
 {{/partial}}
 {{#partial "content"}}

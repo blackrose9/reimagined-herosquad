@@ -1,0 +1,13 @@
+{{#partial "content"}}
+    HIIIIEEEYYYY!
+    {{#if username}}
+        <h1>{{username}}'s Hero Squads!</h1>
+
+    {{else}}
+        <form action="/session" method="post" class="container">
+            <label for="username">Enter a Username</label>
+            <input id="username" name="username" type="text">
+            <button type="submit">Submit Username</button>
+        </form>
+    {{/if}}
+{{/partial}}

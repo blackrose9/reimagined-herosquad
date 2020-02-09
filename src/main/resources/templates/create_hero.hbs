@@ -1,3 +1,13 @@
+{{#partial "active"}}
+    <ul class="nav nav-tabs">
+        <li role="presentation"><a href="/">Home</a></li>
+        <li role="presentation"><a href="/view_hero">View Heroes</a></li>
+        <li role="presentation" class="active"><a href="/create_hero">Create New Hero</a></li>
+        <li role="presentation"><a href="/view_squa">View Squads</a></li>
+    </ul>
+{{/partial}}
+
+
 {{#partial "content"}}
 <h1>Create a hero!</h1>
 <form action="/create_hero/new" method="post">

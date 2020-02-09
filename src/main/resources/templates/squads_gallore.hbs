@@ -1,35 +1,46 @@
+{{#partial "active"}}
+    <ul class="nav nav-tabs">
+        <li role="presentation"><a href="/">Home</a></li>
+        <li role="presentation"><a href="/view_hero">View Heroes</a></li>
+        <li role="presentation"><a href="/create_hero">Create New Hero</a></li>
+        <li role="presentation" class="active"><a href="/view_squa">View Squads</a></li>
+    </ul>
+{{/partial}}
+
 {{#partial "content"}}
-    {{#if username}}
-        <h1>{{username}}'s Hero Squads!</h1>
         <ol class="list-group">
-            <li class="list-group-item">
+            <li class="list-group-item d-flex flex-row border border-info">
                 <div class="d-flex flex-row">
                     <img src="" class="p-2"/>
                     <p class="p-2">KitchenMasters</p>
-                    <a href="/create_hero"><button class="p-2 btn">View Squad</button></a>
+                    <a href="/view_squad/1"><button class="p-2 btn bg-info">View Squad</button></a>
                 </div>
             </li>
             <hr>
-            <li class="list-group-item d-flex flex-row">
+            <li class="list-group-item d-flex flex-row border border-danger">
                 <img src="" class="p-2"/>
                 <p class="p-2">MeatMasters</p>
-                <a href="/create_hero"><button class="p-2 btn">View Squad</button></a>
+                <a href="/view_squad/2"><button class="p-2 btn bg-danger">View Squad</button></a>
             </li>
             <hr>
-            <li class="list-group-item d-flex flex-row">
+            <li class="list-group-item d-flex flex-row border border-warning">
                 <img src="" class="p-2"/>
                 <p class="p-2">SpiceMasters</p>
-                <a href="/create_hero"><button class="p-2 btn">View Squad</button></a>
+                <a href="/view_squad/3"><button class="p-2 btn bg-warning">View Squad</button></a>
+            </li>
+            <hr>
+            <li class="list-group-item d-flex flex-row border border-success">
+                <img src="" class="p-2"/>
+                <p class="p-2">SousMasters</p>
+                <a href="/view_squad/4"><button class="p-2 btn bg-success">View Squad</button></a>
             </li>
             <hr>
         </ol>
-    {{else}}
-        <form action="/session" method="post" class="container">
-            <label for="username">Enter a Username</label>
-            <input id="username" name="username" type="text">
-            <button type="submit">Submit Username</button>
-        </form>
-    {{/if}}
 {{/partial}}
 
 {{>layout.hbs}}
+
+<span class="border border-secondary"></span>
+<span class="border border-success"></span>
+<span class="border border-danger"></span>
+<span class="border border-warning"></span>

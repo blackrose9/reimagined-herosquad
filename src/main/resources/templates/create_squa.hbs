@@ -1,0 +1,29 @@
+{{#partial "active"}}
+    <ul class="nav nav-tabs">
+        <li role="presentation"><a href="/">Home</a></li>
+        <li role="presentation"><a href="/view_hero">View Heroes</a></li>
+        <li role="presentation" class="active"><a href="/create_hero">Create New Hero</a></li>
+        <li role="presentation"><a href="/view_squa">View Squads</a></li>
+        <li role="presentation" class="active"><a href="/create_squa">Create New Squa</a></li>
+    </ul>
+{{/partial}}
+
+{{#partial "content"}}
+    <h1>Create a squa!</h1>
+    <form action="/create_squa/new" method="post">
+        <label for="name">Victorious Title</label>
+        <input id="name" name="name" type="text">
+
+        <label for="cause">Righteous Cause</label>
+        <input id="cause" name="cause" type="text">
+
+        <label for="members">Max Members</label>
+        <input id="members" name="members" type="text">
+
+        <label for="kryptonite">Weakness</label>
+        <input id="kryptonite" name="kryptonite" type="text">
+
+        <button type="submit" class="btn btn-default">Add Hero</button>
+    </form>
+{{/partial}}
+{{> layout.hbs}}

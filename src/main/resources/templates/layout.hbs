@@ -1,17 +1,23 @@
-{{#block "header"}}
-    <!DOCTYPE html>
-    <html>
+<!DOCTYPE html>
+<html>
     <head>
         <title>{{#block "title"}}HeroSquaa{{/block}}</title>
         <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
 <!--        <link rel="stylesheet" href="/css/main.css">-->
     </head>
     <body>
-{{/block}}
-<div class="container">
-    {{#block "content"}}
+    {{#block "active"}}
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="/">Home</a></li>
+            <li role="presentation"><a href="/view_hero">View Heroes</a></li>
+            <li role="presentation"><a href="/create_hero">Create New Hero</a></li>
+            <li role="presentation"><a href="/view_squa">View Squads</a></li>
+        </ul>
     {{/block}}
-</div>
+        <div class="container">
+            {{#block "content"}}
+            {{/block}}
+        </div>
 {{#block "footer"}}
     </body>
     </html>

@@ -5,7 +5,10 @@ public class Hero {
     private int mAge;
     private String mPower;
     private String mKryptonite;
-
+    //.....
+    private boolean isInSqua;
+    private int id;
+    //.....
     private static ArrayList<Hero> instances = new ArrayList<Hero>();
 
     public Hero(String alias, int age, String power, String kryptonite) {
@@ -13,17 +16,17 @@ public class Hero {
         this.mAge = age;
         this.mPower = power;
         this.mKryptonite = kryptonite;
-
+        //.....
+        this.isInSqua = false;
         instances.add(this);
+        this.id = instances.size();
     }
 
     public static ArrayList<Hero> getAll(){
         return instances;
     }
 
-    public static void retireAllHeroes(){
-        instances.clear();
-    }
+    public Boolean getIsSqua(){ return this.isInSqua; }
 
     public String getAlias() {
         return mAlias;
@@ -53,7 +56,7 @@ public class Hero {
         return mKryptonite;
     }
 
-    public void setKryptonite(String kryptonite) {
-        this.mKryptonite = kryptonite;
-    }
+    public void setKryptonite(String kryptonite) { this.mKryptonite = kryptonite; }
+
+    public static void retireAllHeroes(){ instances.clear(); }
 }

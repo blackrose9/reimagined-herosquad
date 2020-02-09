@@ -1,0 +1,23 @@
+{{#partial "active"}}
+    <ul class="nav nav-tabs">
+        <li role="presentation"><a href="/">Home</a></li>
+        <li role="presentation" class="active"><a href="/view_hero">View Heroes</a></li>
+        <li role="presentation"><a href="/create_hero">Create New Hero</a></li>
+        <li role="presentation"><a href="/view_squa">View Squads</a></li>
+    </ul>
+{{/partial}}
+
+{{#if heroes}}
+    {{#each heroes}}
+        <div class="well">
+            Name: {{alias}}
+            Age:{{age}}
+            Special Power: {{power}}
+            <small>Weakness: {{kryptonite}} </small>
+            <hr>
+        </div>
+    {{/each}}
+{{else}}
+    No heroes in this squad yet... add some to help you achieve your cause.
+    <a href="create_hero.hbs" class="btn">Shop for Hero</a>
+{{/if}}
