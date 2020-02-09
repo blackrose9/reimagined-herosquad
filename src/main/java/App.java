@@ -13,7 +13,8 @@ public class App {
         Squad squad2 = new Squad("Spice Masters", "Good Cooking", 10, "warning");
         Squad squad3 = new Squad("Sous Masters", "Good Cooking", 10, "success");
         Squad squad4 = new Squad("Meat Masters", "Good Cooking", 10, "danger");
-
+        ArrayList<Squad> squads = Squad.getAll();
+        Hero hero1 = new Hero("Kitchen Warrior", 23, "Master knife handler", "tends to cut herself very often");
         Map<String, Object> model = new HashMap<String, Object>();
 
         post("/session", (request, response) -> {
@@ -52,13 +53,13 @@ public class App {
         }, new HandlebarsTemplateEngine());
 
         get("/view_hero", (request, response) -> {
+
             ArrayList<Hero> heroes = Hero.getAll();
             model.put("heroes", heroes);
             return new ModelAndView(model, "heroes_gallore.hbs");
         }, new HandlebarsTemplateEngine());
 
         get("/view_squa", (request, response) -> {
-            ArrayList<Squad> squads = Squad.getAll();
             model.put("squads", squads);
             return new ModelAndView(model, "squads_gallore.hbs");
         }, new HandlebarsTemplateEngine());
