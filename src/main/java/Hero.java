@@ -1,5 +1,3 @@
-package definitions;
-
 import java.util.ArrayList;
 
 public class Hero {
@@ -17,7 +15,6 @@ public class Hero {
         this.mKryptonite = kryptonite;
 
         instances.add(this);
-//      instances.addAll(mAge, mAlias, mKryptonite, mPower);
     }
 
     public static ArrayList<Hero> getAll(){

@@ -1,4 +1,3 @@
-import definitions.Hero;
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 
