@@ -1,4 +1,12 @@
 body{
     /*background-color: whitesmoke;*/
     background-image: url("/images/batbkg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.form-text {
+    color: whitesmoke;
+}
+.nav{
+    color: whitesmoke;
 }

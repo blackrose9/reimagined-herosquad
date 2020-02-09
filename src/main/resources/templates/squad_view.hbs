@@ -14,12 +14,13 @@
 {{/partial}}
 
 {{#partial "content"}}
+    <br>
     {{#if squad}}
-        <div class="card">
+        <div class="well">
             <h1 class="block">{{ squad.name }}</h1>
             <hr>
             <h2> We are dedicated to fighting for: {{ squad.cause }}  </h2>
-            <h3>  {{ squad.members}} members   </h3>
+            <h5>  {{ squad.members}} members (max) </h5>
         </div>
     {{/if}}
     {{else}}

@@ -9,8 +9,8 @@
 
 
 {{#partial "content"}}
-<h1>Create a hero!</h1>
-<form action="/create_hero/new" method="post" class="input-group">
+<h1 class="form-text">Create a hero!</h1>
+<form action="/create_hero/new" method="post" class="input-group form-text">
     <div class="form-group">
         <label for="alias">Alias</label>
         <input class="form-control" id="alias" name="alias" type="text">
@@ -41,6 +41,7 @@
             <option value="sous">Sous Masters</option>
         </select>
     </div>
+    <br>
     <br>
     <button type="submit" class="btn btn-outline-secondary">Add Hero</button>
 </form>

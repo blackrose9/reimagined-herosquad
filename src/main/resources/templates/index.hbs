@@ -3,10 +3,10 @@
         <h1>{{username}}'s Hero Squads!</h1>
 
     {{else}}
-        <form action="/session" method="post" class="container">
+        <form action="/session" method="post" class="form-text">
             <label for="username">Enter a Username</label>
-            <input id="username" name="username" type="text">
-            <button type="submit">Submit Username</button>
+            <input id="username" name="username" type="text" class="form-control">
+            <button type="submit" class="btn btn-default">Submit Username</button>
         </form>
     {{/if}}
 {{/partial}}
