@@ -16,10 +16,10 @@
 {{#partial "content"}}
     {{#if squad}}
         <div class="card">
-            <h1 class="block">{{name}}</h1>
+            <h1 class="block">{{ squad.name }}</h1>
             <hr>
-            <h2> We are dedicated to fighting for: {{ cause }}  </h2>
-            <h3>  {{members}} members   </h3>
+            <h2> We are dedicated to fighting for: {{ squad.cause }}  </h2>
+            <h3>  {{ squad.members}} members   </h3>
         </div>
     {{/if}}
     {{else}}
