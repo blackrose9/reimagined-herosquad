@@ -1,0 +1,30 @@
+<!--Here you can view a squads details and it's members and add heroes to the squad-->
+<!--Get clicked squaa details and form and Fill in the page according to the squaas details.-->
+{{#partial "title"}}
+<!--{SquaName}-->
+{{/partial}}
+
+{{#partial "active"}}
+    <ul class="nav nav-tabs">
+        <li role="presentation"><a href="/">Home</a></li>
+        <li role="presentation"><a href="/view_hero">View Heroes</a></li>
+        <li role="presentation"><a href="/create_hero">Create New Hero</a></li>
+        <li role="presentation" class="active"><a href="/view_squa">View Squads</a></li>
+    </ul>
+{{/partial}}
+
+{{#partial "content"}}
+    <br>
+    {{#if squad}}
+        <div class="well">
+            <h1 class="block">{{ squad.name }}</h1>
+            <hr>
+            <h2> We are dedicated to fighting for: {{ squad.cause }}  </h2>
+            <h5>  {{ squad.members}} members (max) </h5>
+        </div>
+    {{/if}}
+    {{else}}
+    <p>*sigh..... it's not working</p>
+
+{{/partial}}
+{{> layout.hbs }}

@@ -1,0 +1,49 @@
+{{#partial "active"}}
+    <ul class="nav nav-tabs">
+        <li role="presentation"><a href="/">Home</a></li>
+        <li role="presentation"><a href="/view_hero">View Heroes</a></li>
+        <li role="presentation" class="active"><a href="/create_hero">Create New Hero</a></li>
+        <li role="presentation"><a href="/view_squa">View Squads</a></li>
+    </ul>
+{{/partial}}
+
+
+{{#partial "content"}}
+<h1 class="form-text">Create a hero!</h1>
+<form action="/create_hero/new" method="post" class="input-group form-text">
+    <div class="form-group">
+        <label for="alias">Alias</label>
+        <input class="form-control" id="alias" name="alias" type="text">
+    </div>
+
+    <div class="form-group">
+        <label for="age">Age</label>
+        <input class="form-control" id="age" name="age" type="number">
+    </div>
+
+    <div class="form-group">
+        <label for="power">Power</label>
+        <input class="form-control" id="power" name="power" type="text">
+    </div>
+
+
+    <div class="form-group">
+        <label for="kryptonite">Weakness</label>
+        <input class="form-control" id="kryptonite" name="kryptonite" type="text">
+    </div>
+
+    <div class="form-group">
+        <label for="squa">Squad</label>
+        <select class="form-control" id="squa" name="squa">
+            <option value="kitchen">Kitchen Masters</option>
+            <option value="spice">Spice Masters</option>
+            <option value="meat">Meat Masters</option>
+            <option value="sous">Sous Masters</option>
+        </select>
+    </div>
+    <br>
+    <br>
+    <button type="submit" class="btn btn-outline-secondary">Add Hero</button>
+</form>
+{{/partial}}
+{{> layout.hbs}}

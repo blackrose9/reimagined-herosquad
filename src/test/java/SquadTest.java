@@ -1,10 +1,8 @@
 import org.junit.After;
 import org.junit.Test;
-import org.junit.jupiter.api.AfterEach;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import static org.junit.jupiter.api.Assertions.*;
 
 public class SquadTest {
     @After

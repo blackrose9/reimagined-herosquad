@@ -5,17 +5,21 @@ public class Hero {
     private int mAge;
     private String mPower;
     private String mKryptonite;
+    private String mSquadName;
+
     //.....
+    public Squad squad;
     private boolean isInSqua;
     private int id;
     //.....
     private static ArrayList<Hero> instances = new ArrayList<Hero>();
 
-    public Hero(String alias, int age, String power, String kryptonite) {
+    public Hero(String alias, int age, String power, String kryptonite, String mSquadName) {
         this.mAlias = alias;
         this.mAge = age;
         this.mPower = power;
         this.mKryptonite = kryptonite;
+        this.mSquadName = mSquadName;
         //.....
         this.isInSqua = false;
         instances.add(this);
@@ -59,4 +63,8 @@ public class Hero {
     public void setKryptonite(String kryptonite) { this.mKryptonite = kryptonite; }
 
     public static void retireAllHeroes(){ instances.clear(); }
+
+    public String getSquadName(){
+        return mSquadName = squad.getName();
+    }
 }
